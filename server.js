@@ -16,8 +16,11 @@ app.get('/sanity', function (request, response){
     response.send("OK!")
 })
 
-app.get('/movies/:title', function (request, response){
-    urllib.request('http://www.omdbapi.com/?s=joker&apikey=a2e2ca53', function (err, data){
+app.get('/movies/:paramss', function (request, response){
+    let movie = request.params.paramss
+    console.log(movie)
+
+    urllib.request(`http://www.omdbapi.com/?s=${movie}&apikey=a2e2ca53`, function (err, data){
 
         let result = JSON.parse(data.toString())
         
@@ -28,7 +31,8 @@ app.get('/movies/:title', function (request, response){
                 year: item.Year,
                 id: item.imdbID
                     }
-        })    
+        }) 
+        console.log(result)   
         response.send(result)
     })
 })

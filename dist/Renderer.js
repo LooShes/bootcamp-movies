@@ -6,6 +6,7 @@ class Renderer {
         const source = $('#template').html()
         const template = Handlebars.compile(source)
         let newHTML = template({movies: data})
+        $('#movies').empty()
         $('#movies').append(newHTML)
     }
 }

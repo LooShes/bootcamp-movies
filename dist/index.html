@@ -14,7 +14,7 @@
 
     <script id="template" type="text/x-handlebars-template">
         {{#each movies}}
-            <div id={{this.id}} class="single-poster">
+            <div data-id={{this.id}} class="single-poster">
                 <p>{{this.title}}</p>
                 <img src="{{this.poster}}" alt="movie_poster.jpg">
                 <p>{{this.year}}</p>

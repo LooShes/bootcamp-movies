@@ -19,7 +19,16 @@ app.get('/sanity', function (request, response){
 app.get('/movies/:title', function (request, response){
     urllib.request('http://www.omdbapi.com/?s=joker&apikey=a2e2ca53', function (err, data){
         let result = JSON.parse(data.toString())
-
+        console.log(result.Search)
+        result = result.Search.map(item => {
+            return { 
+                poster: item.Poster,
+                title: item.Title,
+                year: item.Year,
+                id: item.imdbID
+                    }
+        })    
+        console.log(result)
         response.send(result)
-})
+    })
 })

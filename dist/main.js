@@ -1,6 +1,6 @@
-// $.get(`/sanity`, function(response) {
-//     console.log(response)
-// })
+$.get(`/sanity`, function(response) {
+    console.log(response)
+})
 
 
 const fetchUserInput = function () {

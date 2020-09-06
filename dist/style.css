@@ -1,0 +1,55 @@
+#movies {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "a b c"
+        "d e f"
+        "g h i"
+        "j . .";
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    font-size: large;
+}
+
+#tt7286456 {
+    grid-area: a;
+}
+
+#tt0233298 {
+    grid-area: b;
+}
+
+#tt1918886 {
+    grid-area: c;
+}
+
+#tt0066070 {
+    grid-area: d;
+}
+
+#tt5611648 {
+    grid-area: e;
+}
+
+#tt0050569 {
+    grid-area: f;
+}
+
+#tt0102166 {
+    grid-area: g;
+}
+
+#tt0759932 {
+    grid-area: h;
+}
+
+#tt5614180 {
+    grid-area: i;
+}
+
+#tt1851730 {
+    grid-area: j;
+}

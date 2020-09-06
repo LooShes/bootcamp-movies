@@ -10,10 +10,22 @@
     <input type="text" id="input" placeholder="Search for movie">
     <button onclick="fetchUserInput()">Search!</button>
 
-    <div id="movies"></div>
+    <div id="movies">
 
     <script id="template" type="text/x-handlebars-template">
-
+        {{#each movies}}
+            <div id={{this.id}} class="single-poster">
+                <p>{{this.title}}</p>
+                <img src="{{this.poster}}" alt="movie_poster.jpg">
+                <p>{{this.year}}</p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            {{/each}}
+        </div>
     </script>
 
     <script src="./jquery/dist/jquery.js"></script>
